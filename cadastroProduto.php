@@ -20,12 +20,12 @@
                 addProduto($_POST['nome'],$_POST['descricao'],$_POST['preco'],$fotoCaminho);
             }
             
-        } else {
+    } else {
 
-            //Garantindo que um vetor erros exista
-            // ainda que vazio quando não houver POST
-            $erros =[];
-        }
+        //Garantindo que um vetor erros exista
+        // ainda que vazio quando não houver POST
+        $erros =[];
+    }
 
     // errNome será true se o campo nome for inválido e false se o campo estiver ok. 
     $errNome = in_array('errNome',$erros);

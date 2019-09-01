@@ -78,3 +78,31 @@
         // Salvar a string no json
         file_put_contents(ARQUIVOFUNC, $json );
     }
+
+        // Validação
+        function errosCadastro() {
+            $erros = [];
+            // Definindo erro no nome, se não for definido ou for nulo
+            if(!isset($_POST['nome']) || $_POST['nome'] == '' ){
+                // Adicionando uma string identificando erro no nome ao array erros
+                $erros[] = 'errNome';
+            }
+            // Definindo erro no email, se nã ofor definido ou for nulo
+            if(!isset($_POST['email']) || $_POST['email'] == ''){
+                // Adicionando strin ao array erros
+                $erros[] = 'errEmail';
+            }
+            // Definindo erro na senha, se não for definida ou nula
+            if(!isset($_POST['senha']) || $_POST['senha'] == ''){
+                // Adicionando string ao array erros
+                $erros[] = 'errSenha';
+            }
+            // Definindo erro na Confirmação de Senha
+            // Será true se a confSenha e Senha não baterem e o campo conf for preenchido
+            if( $_POST['confSenha'] != $_POST['senha'] && isset($_POST['conf']) ){
+                // Adicionando string ao array erros
+                $erros[] = 'errConf';
+            }
+            return $erros;
+        }
+    

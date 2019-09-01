@@ -1,3 +1,11 @@
+<?php
+    // como usar o __DIR__ ?, caberia aqui ?
+    include('./inc/functions.php');
+
+    if($_POST){
+        addFuncionario($_POST['nome'],$_POST['email'],$_POST['senha']);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,13 +34,13 @@
             <!-- CAMPOO SENHA -->
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input type="password" class="form-control" id="senha" placeholder="Defina sua Senha">
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Defina sua Senha">
                 <small id="emailHelp" class="form-text text-muted">Escolha uma senha segura.</small>
             </div>
             <!-- CAMPO CONIFRMAÇÃO DE SENHA -->
             <div class="form-group">
                 <label for="senhaConfirmacao">Confirmação Senha</label>
-                <input type="password" class="form-control" id="senhaConfirmacao" placeholder="Confirme sua senha">
+                <input type="password" class="form-control" id="senhaConfirmacao" name="senhaConfirmacao" placeholder="Confirme sua senha">
             </div>
             <!-- BOTÃO -->
             <button type="submit" class="btn btn-primary">Cadastrar</button>

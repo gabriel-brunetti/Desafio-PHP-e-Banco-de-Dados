@@ -44,7 +44,7 @@
     // ----------- FUNCIONARIOS --------------
 
     // Definir uma constante para o arquivo funcionarios.json
-    define('ARQUIVOFUNC','funcionarios.json')
+    define('ARQUIVOFUNC','funcionarios.json');
 
     // Carregando o contéudo do JSON para uma variável
     function getFuncionarios(){
@@ -63,7 +63,7 @@
         $funcionarios = getFuncionarios();
 
         // Encriptando a senha
-        $hash = password_hash (string $senha, PASSWORD_DEFAULT);
+        $hash = password_hash ($senha,PASSWORD_DEFAULT);
 
         // Adicionando um funcionário ao JSON
         $funcionarios[] = [
@@ -76,5 +76,5 @@
         $json = json_encode($funcionarios);
 
         // Salvar a string no json
-        file_put_contents(string ARQUVIOFUNC, $json );
+        file_put_contents(ARQUIVOFUNC, $json );
     }

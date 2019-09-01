@@ -16,6 +16,7 @@
             }
 
             if(count($erros) == 0){
+                // Adicionando produto ao JSON
                 addProduto($_POST['nome'],$_POST['descricao'],$_POST['preco'],$fotoCaminho);
             }
             

@@ -105,4 +105,30 @@
             }
             return $erros;
         }
+
+    // ------------ LOGIN -------------------
+
+    function logar($email,$senha){
+        // carregar base de dados funcionários
+        $funcionarios = getFuncionarios();
+
+        // Procurar funcionário com o email dado
+        $achou = false;
+        foreach ($funcionarios as $f) {
+            if($f['email'] == $email){
+                $achou = true;
+                break;
+                // break interrompe o foreach/LOOP, não o script
+            }
+        }
+
+        // garantindo que retornará erro se não encontrar o email
+        if(!$achou) {
+            return false;
+        } else {
+            $senhaOK = password_verify($senha,$f['senha']);
+            // retornando falso se a senha não bater
+            return $senhaOK;
+        }
+    }
     

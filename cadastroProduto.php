@@ -1,6 +1,13 @@
 <?php
     include('./inc/functions.php');
 
+    // Condicionar o acesso a página a estar logado
+    session_start();
+    if(!$_SESSION['logado']){
+        // redirecionar para login
+        header('location: login.php');
+    }
+
     if($_POST){
         
         // verificando o post

@@ -10,6 +10,7 @@
         if($loginOK){
 
             // Criando a session
+            session_start();
             $_SESSION['logado'] = true;
 
             // Redirecionando para index

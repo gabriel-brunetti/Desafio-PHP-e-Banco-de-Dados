@@ -1,6 +1,11 @@
 <?php
-    
     include('./inc/functions.php');
+
+    session_start();
+    if(!$_SESSION['logado']){
+        // redirecionar para login
+        header('location: login.php');
+    }
 
     // carregando os produtos
     $produtos = getProdutos();

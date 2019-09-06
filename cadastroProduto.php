@@ -53,6 +53,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+<!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./cadastroUsuarios.php">Cadastro Usuarios</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produtos
+                </a>
+                <div class="dropdown-menu active" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item active" href="./cadastroProduto.php">Cadastro Produtos</a>
+                <a class="dropdown-item" href="./tabelaProduto.php">Tabela Produtos</a>
+                </div>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method="post" action="logout.php">
+            <input type="hidden" name="logout">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+<!-- FINAL HEADER -->
+<!-- CONTEUDO PAGINA -->
 <div class="container">
     <h3 class=pt-4>CADASTRO DE PRODUTOS</h3>
     <div class="row pt-3">

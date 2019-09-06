@@ -14,7 +14,7 @@
             $_SESSION['logado'] = true;
 
             // Redirecionando para index
-            header('location: cadastroProduto.php');
+            header('location: cadastroUsuarios.php');
         } if($loginOK == false){
             ?>
             <div class="alert alert-danger" role="alert">

@@ -22,7 +22,7 @@ $(document).ready(function(){
             y: '0',
             opacity: 1,
             ease: easeOut,
-            onComplete:function () {}
+            onComplete:function() {}
         }
     );
 

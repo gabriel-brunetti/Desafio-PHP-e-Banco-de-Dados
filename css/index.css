@@ -6,16 +6,21 @@
     --white:#ffffff;
 }
 
+html{
+    height: 100vh;
+}
+
 body{
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
 .bg-blue {
     background-color: var(--blue);
 }
 
-section.header{
+/* section.header{
     background-color: var(--blue);
-}
+} */
 
 .brand-name{
     font-weight: 300 !important;

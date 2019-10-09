@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>Index</title>
 </head>
-<body>
+<body class="vh-100 bg-blue">
 <!-- HEADER -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand brand-name text-white" href="#">omo<b>box</b> </a>
@@ -20,7 +20,7 @@
             <ul class="navbar-nav ml-auto">
             <!-- BOTÂO LOGIN -->
             <li class="nav-item">
-                <a class="nav-link p-0" href="./index.php">
+                <a class="nav-link p-0" href="./login.php">
                     <div class="text-wrapper">
                         <div class="text-inner">
                             <div class="menu-btn px-md-5 px-1 py-2 text-white">
